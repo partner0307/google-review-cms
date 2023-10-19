@@ -5,7 +5,7 @@ import BlankLayout from "src/@core/layouts/BlankLayout";
 const Signup = () => {
   return (
     <Grid container>
-      <Grid md={6} sm={12} xs={12}>
+      <Grid item md={6} sm={12} xs={12}>
         <Box
           component={'div'}
           display={'flex'}
@@ -16,7 +16,7 @@ const Signup = () => {
           <SignUp />
         </Box>
       </Grid>
-      <Grid md={6} sm={12} xs={12}>
+      <Grid item md={6} sm={12} xs={12}>
         <Box
           width={'100%'}
           height={'100%'}
