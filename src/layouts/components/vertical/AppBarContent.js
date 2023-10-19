@@ -12,7 +12,6 @@ import Magnify from 'mdi-material-ui/Magnify'
 // ** Components
 import ModeToggler from 'src/@core/layouts/components/shared-components/ModeToggler'
 import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown'
-import { UserButton } from '@clerk/nextjs';
 import NotificationDropdown from 'src/@core/layouts/components/shared-components/NotificationDropdown'
 
 const AppBarContent = props => {
@@ -64,7 +63,7 @@ const AppBarContent = props => {
         )}
         <ModeToggler settings={settings} saveSettings={saveSettings} />
         <NotificationDropdown />
-        <UserButton afterSignOutUrl="/auth/signin" />
+        <UserDropdown />
       </Box>
     </Box>
   )

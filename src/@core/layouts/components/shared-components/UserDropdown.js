@@ -2,10 +2,7 @@
 import { useState, Fragment } from 'react'
 
 // ** Next Import
-import { useRouter } from 'next/router';
-
-// ** Clerk Import
-import { UserButton } from '@clerk/nextjs';
+import { useRouter } from 'next/router'
 
 // ** MUI Imports
 import Box from '@mui/material/Box'
@@ -69,8 +66,7 @@ const UserDropdown = () => {
 
   return (
     <Fragment>
-      <UserButton afterSignOutUrl="/auth/signin"/>
-      {/* <Badge
+      <Badge
         overlap='circular'
         onClick={handleDropdownOpen}
         sx={{ ml: 2, cursor: 'pointer' }}
@@ -148,12 +144,11 @@ const UserDropdown = () => {
           </Box>
         </MenuItem>
         <Divider />
-        <MenuItem sx={{ py: 2 }}>
-          <UserButton afterSignOutUrl="/"/>
+        <MenuItem sx={{ py: 2 }} onClick={() => handleDropdownClose('/pages/login')}>
           <LogoutVariant sx={{ marginRight: 2, fontSize: '1.375rem', color: 'text.secondary' }} />
           Logout
         </MenuItem>
-      </Menu> */}
+      </Menu>
     </Fragment>
   )
 }
