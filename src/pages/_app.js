@@ -5,11 +5,11 @@ import { Router } from 'next/router'
 // ** Loader Import
 import NProgress from 'nprogress'
 
-// ** Clerk Imports
-import { ClerkProvider } from '@clerk/nextjs';
-
 // ** Emotion Imports
 import { CacheProvider } from '@emotion/react'
+
+// ** Clerk Imports
+import { ClerkProvider } from '@clerk/nextjs';
 
 // ** Config Imports
 import themeConfig from 'src/configs/themeConfig'
@@ -28,7 +28,10 @@ import { createEmotionCache } from 'src/@core/utils/create-emotion-cache'
 import 'react-perfect-scrollbar/dist/css/styles.css'
 
 // ** Global css styles
-import '../../styles/globals.css'
+import '../../styles/globals.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -66,11 +69,11 @@ const App = props => {
         </Head>
 
         <SettingsProvider>
-          <SettingsConsumer>
-            {({ settings }) => {
-              return <ThemeComponent settings={settings}>{getLayout(<Component {...pageProps} />)}</ThemeComponent>
-            }}
-          </SettingsConsumer>
+            <SettingsConsumer>
+              {({ settings }) => {
+                return <ThemeComponent settings={settings}>{getLayout(<Component {...pageProps} />)}</ThemeComponent>
+              }}
+            </SettingsConsumer>
         </SettingsProvider>
       </CacheProvider>
     </ClerkProvider>
