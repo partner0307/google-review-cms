@@ -1,6 +1,8 @@
 const path = require('path')
 
-module.exports = {
+// next.config.js // pass the modules you would like to see transpiled
+
+const nextConfig = {
   trailingSlash: true,
   reactStrictMode: false,
   experimental: {
@@ -16,3 +18,5 @@ module.exports = {
     return config
   }
 }
+
+module.exports = nextConfig
